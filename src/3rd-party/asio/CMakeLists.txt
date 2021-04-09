@@ -1,0 +1,4 @@
+add_library(asio_impl STATIC asio_impl.cpp)
+target_compile_definitions(asio_impl PUBLIC ASIO_SEPARATE_COMPILATION)
+target_link_libraries(asio_impl PUBLIC CONAN_PKG::asio)
+target_link_libraries(asio_impl PRIVATE project_options)

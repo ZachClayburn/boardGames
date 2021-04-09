@@ -1,9 +1,12 @@
 find_package(Protobuf REQUIRED)
 set(PROTO_FILES
         proto/dummy.proto
+        proto/BoardGameMessage.proto
+        proto/ChatMessage.proto
         )
 
 add_library(Protos STATIC
+        Serializer.cpp Serializer.h
         ${PROTO_FILES}
         )
 
